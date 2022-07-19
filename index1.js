@@ -32,4 +32,4 @@ const freelanceWork = {
 }
 
 console.log(freelanceWork.myproject(1));
-console.log(freelanceWork.PaymentMethod(2000));
+console.log(freelanceWork.PaymentMethod(2000))
