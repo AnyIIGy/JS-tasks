@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Moonrocks&display=swap');
+/* font-family: 'Permanent Marker', cursive; */
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(21,0,36,0.9514399509803921) 10%, rgba(62,9,121,0.6349133403361344) 76%, rgba(12,31,36,1) 100%);
+}
+.conatiner {
+    position: relative;
+    margin-top: 60px;
+    left: 35%;
+}
+.book{
+    position: relative;
+    width: 400px;
+    height: 580px;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+}
+.book:hover{
+    z-index: 1;
+    transform: perspective(2000px);
+    box-shadow: inset 10px 0 50px rgba(0, 0, 0, 0.5)
+}
+.book .cover{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+.book:hover .cover{
+    transform: rotateY(-135deg);
+}
+.book .cover img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+}
+.book .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing:border-box;
+    padding: 20px;
+}
+.details p,h2 {
+    padding: 10px;
+}
+#text{
+    margin-left: 60px;
+    color:#000;
+    font-size: 4em;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+}
+#text span {
+    filter: blur(5px);
+    padding: 0.5px;
+    transition: 0.5s;
+    text-shadow: rgba(202, 166, 244, 0.635) 1px 0 20px;;
+}
+#text span:hover{
+    filter: blur(0px);
+    transition: 0s;
+}
+.container2{
+    top: 20%;
+    left: 30%;
+    position: absolute;
+}
+.container2 .card{
+    margin-left: 50px;
+}
+.container2 .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #340333;
+    display: flex;
+}
+.container2 .card .icon img{
+    width: 300px;
+}
+
+.container2 .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: #fff;
+}
+
+.container2 .card .slide {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container2 .card .slide.slide1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .7s;
+    transform: translateY(100px);
+}
+
+.container2 .card:hover .slide.slide1{
+    transform: translateY(0px);
+}
+
+.container2 .card .slide.slide2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: .8s;
+    transform: translateY(-100px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.container2 .card:hover .slide.slide2{
+    transform: translateY(0);
+}
+
+.container2 .card .slide.slide2::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    bottom: 15px;
+    left: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+}
+
+.container2 .card .slide.slide2 .content .git-link {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #070707;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container2 .card .slide.slide2 .content .git-link:hover{
+    color:#fff;
+    text-shadow:
+    0 0 10px rgb(129, 10, 111),
+    0 0 20px rgb(129, 10, 111),
+    0 0 40px rgb(129, 10, 111),
+    0 0 80px rgb(129, 10, 111),
+    0 0 120px rgb(129, 10, 111);
+}
+
+.container2 .card .slide.slide2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 28px;
+    text-align: center;
+    color: rgba(236, 232, 232, 0.791);
+    cursor: pointer;
+}
