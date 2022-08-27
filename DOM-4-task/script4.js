@@ -14,7 +14,7 @@ signIn.addEventListener("click", e => {
 window.addEventListener("click", e => {
     if (e.target === modalWrap) {
         modalWrap.style.display = "none"
-    }else {
+    }else if (e.target === signIn) {
         modalWrap.style.display = "flex"
     }
 })
