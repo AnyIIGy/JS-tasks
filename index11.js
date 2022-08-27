@@ -30,3 +30,7 @@ function CallBackFinished() {
 }
 
 doTask2('CallBack', CallBackFinished);
+
+
+let str = "asnd"
+str.forEach(items)
